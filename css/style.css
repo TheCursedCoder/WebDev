@@ -39,6 +39,11 @@ h3 {
 /* //////////////////////////////////////////////////////////////// */
 .hero-section {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 nav {
@@ -48,6 +53,7 @@ nav {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
+  width: 100%;
 }
 
 .nav-logo a {
@@ -89,6 +95,11 @@ nav {
 /* Hero Section */
 /* //////////////////////////////////////////////////////////////// */
 
+header {
+  width: 100%;
+  height: 100vh;
+}
+
 .hero-container {
   background-color: #1f1f1f;
   margin: auto;
@@ -98,8 +109,9 @@ nav {
 
 .titles {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
 }
+
 .hero-title {
   font-size: 20rem;
   font-weight: 200;
@@ -114,21 +126,12 @@ nav {
   margin: 2rem 0 0 0.6rem;
 }
 
-#hero-img {
-  position: absolute;
-  width: 86%;
-  bottom: 0.2rem;
-  left: 50%;
-  transform: translate(-50%);
-}
-
 /* ************************************************************* */
 /* About Section */
 /* ************************************************************* */
 
 .h3-lg {
   font-size: 8rem;
-  align-self: flex-start;
 }
 
 .about-container {
@@ -164,7 +167,7 @@ nav {
 
 .portfolio {
   min-height: 100vh;
-  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -596,7 +599,7 @@ footer p {
 
 @media only screen and (max-width: 1450px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
   }
 
   nav {
@@ -622,29 +625,32 @@ footer p {
 
 @media only screen and (max-width: 1100px) {
   .hero-title {
-    font-size: 14.5rem;
-    line-height: 14.5rem;
+    font-size: 18rem;
+    line-height: 18rem;
   }
   .hero-sub-title {
-    font-size: 7rem;
+    font-size: 7.6rem;
+  }
+
+  .nav-logo a {
+    font-size: 4rem;
   }
 
   nav {
-    display: block;
     margin-top: 1rem;
   }
 
   .nav-container {
     display: none;
   }
+
   .hamburger {
     display: block;
-    z-index: 99999;
-    position: fixed;
-    height: 3rem;
-    width: 3rem;
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
     top: 1.5rem;
-    right: 2rem;
+    right: 1rem;
   }
 
   #hamburger {
@@ -671,12 +677,17 @@ footer p {
 
 @media only screen and (max-width: 950px) {
   .hero-title {
-    font-size: 13rem;
-    line-height: 13rem;
+    font-size: 16rem;
+    line-height: 16rem;
     margin-left: 3rem;
   }
+
+  .font-logo a {
+    font-size: 3rem;
+  }
+
   .hero-sub-title {
-    font-size: 6rem;
+    font-size: 6.5rem;
     margin-left: 3rem;
   }
   .nav-container a {
@@ -693,19 +704,21 @@ footer p {
   }
 
   .about-container {
-    display: block;
+    flex-direction: column;
     margin: 0 auto;
+    max-width: 95%;
   }
 
   .about-content {
-    margin: 3rem auto;
+    margin: 0 auto;
   }
   .about-line {
     display: none;
   }
-  .h3-lg {
+
+  .about-container h3 {
     margin: 0;
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 }
 
@@ -768,12 +781,20 @@ footer p {
 }
 
 @media only screen and (max-width: 550px) {
+  .nav-logo a {
+    font-size: 4rem;
+  }
+
+  .hero-title {
+    font-size: 13rem;
+    line-height: 13rem;
+  }
   .hero-sub-title {
-    font-size: 6rem;
+    font-size: 7.5rem;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .hero-title {
     font-size: 6rem;
     line-height: 6rem;
@@ -781,10 +802,11 @@ footer p {
   .hero-sub-title {
     font-size: 4.8rem;
     margin-bottom: 5rem;
+    background-color: red;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
   ::after {
@@ -796,4 +818,4 @@ footer p {
     transition-duration: 0s !important;
     transition-delay: 0s !important;
   }
-}
+} */
