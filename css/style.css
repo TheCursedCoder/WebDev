@@ -20,10 +20,10 @@ body {
 }
 
 ::selection {
-  background: #ffc121; /* WebKit/Blink Browsers */
+  background: #ffc121;
 }
 ::-moz-selection {
-  background: #ffc121; /* Gecko Browsers */
+  background: #ffc121;
 }
 
 h3 {
@@ -117,7 +117,7 @@ header {
 .hero-container {
   display: flex;
   align-items: flex-end;
-  height: 90vh; /* shifts the titles up the small the vh */
+  height: 88vh; /* shifts the titles up the small the vh */
 }
 
 .hero-title {
@@ -132,6 +132,67 @@ header {
   font-size: 10rem;
   font-weight: 100;
   margin: 2rem 0 0 0.6rem;
+  animation: 2s sub-title;
+}
+
+.line-1 {
+  animation: 1s title-1;
+}
+
+.line-2 {
+  animation: 1.5s title-2;
+}
+
+@keyframes title-1 {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes title-2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-100px);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sub-title {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateY(-100px);
+  }
+  40% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ************************************************************* */
@@ -503,11 +564,6 @@ footer p {
 .hamburger {
   display: none;
   cursor: pointer;
-  transition: transform 0.5s;
-}
-
-.hamburger:hover {
-  transform: scale(1.1);
 }
 
 /* ************************************************************* */
@@ -557,6 +613,8 @@ footer p {
   padding: 2rem 0;
 }
 
+/*  */
+
 /* Media Queries */
 @media only screen and (max-width: 1500px) {
   .hero-title {
@@ -603,9 +661,7 @@ footer p {
   }
 
   .hamburger {
-    display: block;
-    position: absolute;
-    width: 100%;
+    display: flex;
     height: 5rem;
   }
 
@@ -614,6 +670,7 @@ footer p {
     width: 3rem;
     height: 3rem;
     right: 4rem;
+    top: 1rem;
   }
 
   .nav-links {
@@ -627,6 +684,7 @@ footer p {
 
   .hero-sub-title {
     font-size: 7.8rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -649,7 +707,6 @@ footer p {
 
   .hero-sub-title {
     font-size: 5rem;
-    margin-bottom: 3rem;
   }
 
   .about-line {
@@ -668,12 +725,12 @@ footer p {
 @media only screen and (max-width: 600px) {
   .hero-title {
     font-size: 8rem;
-    line-height: 8rem;
+    line-height: 10rem;
   }
 
   .hero-sub-title {
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
   }
 
   #hamburger {
