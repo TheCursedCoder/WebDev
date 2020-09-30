@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
@@ -33,7 +33,6 @@
       </ul>
     </div>
  </nav>
-
 
  <div class="hamburger"><img src="./img/menu-white.svg" alt="menu-icon" id="hamburger"> </div>
  <div class="menu">
@@ -66,7 +65,8 @@
 
  <section id="about-section">
       <div class="about-container">
-          <h3 class="h3-lg">About<span class="primary-color">.</span></h3>
+          <!-- <h3 class="h3-lg">About<span class="primary-color">.</span></h3> -->
+          <h3>About<span class="primary-color">.</span></h3>
 
           <div class="about-content">
             <div class="about-line"></div>
@@ -88,48 +88,42 @@
     </section>
 
     <section>
-
       <div class="portfolio">
         <h3>Projects<span class="primary-color">.</span></h3>
 
         <div class="portfolio-container">
+              <div class="portfolio-item">
+                <p class="portfolio-item__title">Executive Cars</p>  
 
-
-          <div class="slide-container">
-            <img src="./img/arrow.svg" alt="left arrow / previous slide" id="previous">
-            <img src="./img/arrow.svg" alt="right arrow / next slide" id="next">
-      
-            <div class="hidden-slide" id="slide">
               <img src="./img/Exec Cars.png" alt="High-End chauffeuring website design" class="website-img exec">
-              <p>1. A modern, simple and clean design for a high-end chauffering service that only uses executive vehicles. A black and gold colour scheme was used to reflect the executive nature of the business while making sure to highlight the call to action. 
-              </p>
-            </div>
+              <p>A modern, simple and clean design for a high-end chauffering service that only uses executive vehicles. A black and gold colour scheme was used to reflect the executive nature of the business while making sure to highlight the call to action. 
+                </p>
+                </div>
+              <div class="portfolio-item">
+                <p class="portfolio-item__title">Happy Paws</p>  
 
-            <div class="hidden-slide" id="slide">
-              <img src="./img/paws.png" alt="Dog walking services website design" class="website-img paws">
-              <p>2. A fun, bright, illustration filled design was used for this dog walking service. Again, I made sure to keep things clear, simple and user friendly while making sure to understand the personality of the business itself.  
-              </p>
-            </div>
+                <img src="./img/paws.png" alt="Dog walking services website design" class="website-img paws">
+                <p>A fun, bright, illustration filled design was used for this dog walking service. Again, I made sure to keep things clear, simple and user friendly while making sure to understand the personality of the business itself.  
+                </p>
+              </div>
+              <div class="portfolio-item">
+                <p class="portfolio-item__title">Band Prototype</p>  
 
-            <div class="hidden-slide" id="slide">
-              <img src="./img/Band.png" alt="band website design" class="website-img jacks">
-              <p>3. This prototype design needed to be darker, moodier and edgier to reflect the indie nature of the band but still have the key information clearly available with an eye catching call to action button. 
-              </p>
-            </div>
-
+                <img src="./img/Band.png" alt="band website design" class="website-img jacks">
+                <p>This prototype design needed to be darker, moodier and edgier to reflect the indie nature of the band but still have the key information clearly available with an eye catching call to action button. 
+                </p>
+              </div>
           </div>
-
-      </div>
-    </div>
     </section>
 
-    <section id="services-section section-top">
+    <section>
+      <div class="services-section">
       <h3>Pricing & Services<span class="primary-color">.</span></h3>
       <div class="price-cards">
         <div class="card">
-          <h3 class="card-header">
+          <h4 class="card-header">
             Option 1
-          </h3>
+          </h4>
           <div class="text-container">
             <p class="card-bold">One Page Brochure Style Website</p>
             <p class="main-card-text">Important information in one simple page. Like this one. It can be particularly user friendly for mobile and tablet users. </p>
@@ -139,9 +133,9 @@
             </div>
         </div>
         <div class="card">
-          <h3 class="card-header">
+          <h4 class="card-header">
             Option 2
-          </h3>
+          </h4>
           <div class="text-container">
           <p class="card-bold">Five Page Brochure Style Website</p>
           <p class="main-card-text">If you have a bit more to say then why not spread it across multiple pages? Give each section the attention it deserves. 
@@ -152,9 +146,9 @@
             </div>          
         </div>
         <div class="card">
-          <h3 class="card-header">
+          <h4 class="card-header">
             Option 3
-          </h3>
+          </h4>
           <div class="text-container">
             <p class="card-bold">Ten Page Brochure Style Website</p>
             <p class="main-card-text">This is for those who really have a lot to say! Just let me know what you need and I'll design and build accordingly. 
@@ -164,9 +158,9 @@
               </div>            
             </div>
         </div>
-      </div>
+     
       <div class="bolt-ons">
-        <h3>Optional Extras<span class="primary-color">.</span></h3>
+        <h5>Optional Extras<span class="primary-color">.</span></h5>
         <div class="bolt-on-content">
           <p class="bold">SEO Report & Optimisation Bolt-On: <span class="primary-color">+£250</span></p>
           <p>Search Engine Optimisation is how websites appear in and rank highly on search engines such as google and bing. </br>You will receive a professional report that includes both competitor & keyword research, current website analysis (if applicable) and recommendations that I will fully implement during the build so you can hit the ground running. Accounts will also be set up on google search console, bing webmaster and google analytics if not already.</p>
@@ -174,12 +168,15 @@
          </div>
       </div>
 
+
       <div class="bolt-ons">
         <div class="bolt-on-content">
         <p class="bold">Copy/Content Writing Services Bolt-On: <span class="primary-color">from £25</span></p>
         <p>A full understanding of how much text you will need for your website is needed to give an accurate costing. If you have also requested the SEO report then all copy will be SEO optimised.</p>  
         </div>
       </div>
+    </div>
+  </div>
     </section>
 
   
@@ -250,7 +247,7 @@
     <section id="contact-section section-top">
       <div class="contact-section">
       <h3> Contact Me<span class="primary-color">.</span> </h3>
-      <h4>Message me today for a free quote.</h4>
+      <p>Send me a message today for a free no obligation quote.</p>
       <div class="email">Email: <a href="mailto:info@kirstyrogers.co.uk" id="email-link">info@kirstyrogers.co.uk</a></div>
       <form method="post" action="./contact.php" id="contact-form">
         <label for="firstname"> First Name: </label>
@@ -291,7 +288,6 @@
             <li><a href="#" class="footer-item-link">Portfolio</a></li>
             <li><a href="#" class="footer-item-link">Services & Prices</a></li>
             <li><a href="#" class="footer-item-link">Process</a></li>
-            <li><a href="#" class="footer-item-link">FAQ</a></li>
             <li><a href="#" class="footer-item-link">Contact</a></li>
           </ul>
         </div>

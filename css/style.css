@@ -19,11 +19,30 @@ body {
   font-size: 1.7rem;
 }
 
+::selection {
+  background: #ffc121; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffc121; /* Gecko Browsers */
+}
+
 h3 {
-  color: #f9f9f9;
   font-weight: 100;
-  font-size: 4.5rem;
+  font-size: 6.75rem;
   text-align: center;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 6.75rem;
+  text-align: center;
+}
+
+h5 {
+  font-size: 3.75rem;
+  font-weight: 200;
+  margin: 0;
 }
 
 .primary-color {
@@ -35,24 +54,19 @@ h3 {
 }
 
 /* //////////////////////////////////////////////////////////////// */
-/* Navbar */
+/* NAVBAR*/
 /* //////////////////////////////////////////////////////////////// */
 .hero-section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  position: relative;
+  height: 100vh;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 700;
   width: 100%;
 }
 
@@ -101,15 +115,9 @@ header {
 }
 
 .hero-container {
-  background-color: #1f1f1f;
-  margin: auto;
-  height: 90vh;
-  position: relative;
-}
-
-.titles {
-  position: absolute;
-  bottom: 1rem;
+  display: flex;
+  align-items: flex-end;
+  height: 90vh; /* shifts the titles up the small the vh */
 }
 
 .hero-title {
@@ -122,7 +130,7 @@ header {
 
 .hero-sub-title {
   font-size: 10rem;
-  font-weight: 200;
+  font-weight: 100;
   margin: 2rem 0 0 0.6rem;
 }
 
@@ -130,19 +138,15 @@ header {
 /* About Section */
 /* ************************************************************* */
 
-.h3-lg {
-  font-size: 8rem;
-}
-
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  margin: 0 auto;
+  height: 100vh;
   overflow: hidden;
   letter-spacing: 0.1rem;
   padding: 4rem 1.5rem;
-  max-width: 94%;
 }
 
 .about-content {
@@ -166,85 +170,51 @@ header {
 /* ************************************************************* */
 
 .portfolio {
-  min-height: 100vh;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 20rem auto;
+  font-size: 1.5rem;
 }
 
 .portfolio-container {
   display: flex;
-  align-items: center;
-  margin: 8rem auto;
   justify-content: center;
-  max-width: 110rem;
-  cursor: pointer;
+  margin: 0 auto;
+  max-width: 130rem;
+  flex-wrap: wrap;
 }
 
-.slide-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  min-height: 50rem;
-  letter-spacing: 0.1rem;
+.portfolio-item,
+.website-img {
+  max-width: 40rem;
 }
 
-.main-slide {
-  display: block;
-  position: absolute;
-  border-radius: 5px;
-  width: 80rem;
-  z-index: 9999;
-}
-
-.hidden-slide {
-  display: none;
-  position: absolute;
-  border-radius: 5px;
-  width: 80rem;
-}
-
-#previous {
-  position: absolute;
-  height: 5rem;
-  left: -46rem;
-  top: 35%;
-  z-index: 99999;
-}
-#next {
-  height: 5rem;
-  transform: scale(-1);
-  position: absolute;
-  top: 35%;
-  right: -46rem;
-  z-index: 99999;
-}
-
-#previous:hover,
-#next:hover {
-  cursor: pointer;
-}
-
-#slide p {
-  height: 8rem;
+.portfolio-item {
+  margin: 1rem;
 }
 
 .website-img {
-  width: 100%;
+  cursor: pointer;
+}
+
+.portfolio-item__title {
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
 }
 
 /* ************************************************************* */
 /* Services and Pricing Section */
 /* ************************************************************* */
-#services-section {
-  margin-top: 30rem;
+
+.services-section {
+  margin: 0 auto;
+  max-width: 130rem;
 }
 
 .price-cards {
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  margin: 10rem auto 0 auto;
+  margin: 8rem auto 0 auto;
   flex-wrap: wrap;
 }
 
@@ -256,6 +226,11 @@ header {
   border-radius: 10px;
   background-image: linear-gradient(#2b2b2b, #000000);
   margin-bottom: 5rem;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
 }
 
 .text-container {
@@ -281,7 +256,7 @@ header {
 .card-header {
   position: absolute;
   width: 30rem;
-  top: -9rem;
+  top: -10.5rem;
   font-size: 5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -289,8 +264,6 @@ header {
 
 .price {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   color: #ffc121;
   font-size: 2.5rem;
@@ -314,20 +287,20 @@ header {
   text-decoration: none;
   font-size: 1.4rem;
   line-height: 3.5rem;
-  transition: transform 0.5s;
 }
 
-.price-btn:hover {
-  transform: scale(1.05);
+.price-btn:hover,
+.price-btn:focus {
+  color: #ffc121;
+  transition: all 0.4s;
+  border: 1px solid #f9f9f9;
 }
 
-/* bolt ons */
 .bolt-ons {
-  max-width: 90rem;
+  width: 90%;
   letter-spacing: 0.1rem;
   font-size: 1.6rem;
-  margin: 0 auto;
-  padding: 0 5%;
+  padding-left: 2rem;
 }
 
 /* ************************************************************* */
@@ -392,11 +365,8 @@ header {
   margin: 0 2.5%;
 }
 
-h4 {
-  font-weight: 200;
+.contact-section p {
   text-align: center;
-  letter-spacing: 0.1rem;
-  margin-top: -4rem;
 }
 
 #contact-form {
@@ -462,9 +432,9 @@ footer p {
 .footer-links {
   display: flex;
   padding: 0;
-  width: 56rem;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 0rem;
+  flex-wrap: wrap;
 }
 
 .footer-item-link {
@@ -479,6 +449,12 @@ footer p {
 
 .footer-container li {
   list-style: none;
+  margin-right: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.footer-container li:last-child {
+  margin-right: 0;
 }
 
 /* ************************************************************* */
@@ -581,241 +557,122 @@ footer p {
   padding: 2rem 0;
 }
 
-/*  */
-
 /* Media Queries */
-
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1500px) {
   .hero-title {
-    font-size: 18rem;
-    line-height: 18rem;
+    font-size: 15.5rem;
+    line-height: 15.5rem;
   }
 
   .hero-sub-title {
-    font-size: 9.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 7.8rem;
   }
 }
 
-@media only screen and (max-width: 1450px) {
-  html {
-    font-size: 50%;
-  }
-
-  nav {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .hero-title {
-    font-size: 16rem;
-    line-height: 16rem;
-  }
-  .hero-sub-title {
-    font-size: 8rem;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .process-item:nth-child(even) {
     margin-top: 1.5rem;
   }
 }
 
-@media only screen and (max-width: 1100px) {
-  .hero-title {
-    font-size: 18rem;
-    line-height: 18rem;
-  }
-  .hero-sub-title {
-    font-size: 7.6rem;
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 52%;
   }
 
   .nav-logo a {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
-  nav {
-    margin-top: 1rem;
+  .hero-title {
+    font-size: 17rem;
+    line-height: 17rem;
   }
 
-  .nav-container {
-    display: none;
+  .hero-sub-title {
+    font-size: 7.8rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 1rem;
+  }
+  .nav-logo a {
+    margin-left: 2rem;
   }
 
   .hamburger {
     display: block;
     position: absolute;
-    height: 3.5rem;
-    width: 3.5rem;
-    top: 1.5rem;
-    right: 1rem;
+    width: 100%;
+    height: 5rem;
   }
 
   #hamburger {
-    width: 100%;
-    height: 100%;
-    fill: #f9f9f9;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    right: 4rem;
   }
 
-  .portfolio .portfolio-container {
-    max-width: 88rem;
-  }
-  .main-slide,
-  .hidden-slide {
-    width: 75rem;
+  .nav-links {
+    display: none;
   }
 
-  #next {
-    right: -43rem;
+  .hero-title {
+    font-size: 17rem;
+    line-height: 17rem;
   }
-  #previous {
-    left: -43rem;
+
+  .hero-sub-title {
+    font-size: 7.8rem;
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 930px) {
   .hero-title {
-    font-size: 16rem;
-    line-height: 16rem;
-    margin-left: 3rem;
-  }
-
-  .font-logo a {
-    font-size: 3rem;
+    font-size: 14.5rem;
+    line-height: 14.5rem;
   }
 
   .hero-sub-title {
     font-size: 6.5rem;
-    margin-left: 3rem;
   }
-  .nav-container a {
-    margin-left: 2.5rem;
-    letter-spacing: 0.2rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .hero-title {
+    font-size: 12rem;
+    line-height: 12rem;
   }
 
-  body {
-    margin: 0;
+  .hero-sub-title {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-title {
+    font-size: 12rem;
+    line-height: 12rem;
   }
 
-  .nav-logo {
-    margin-left: 2rem;
+  .hero-sub-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-line {
+    display: none;
   }
 
   .about-container {
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 95%;
   }
 
   .about-content {
     margin: 0 auto;
   }
-  .about-line {
-    display: none;
-  }
-
-  .about-container h3 {
-    margin: 0;
-    font-size: 5rem;
-  }
 }
-
-@media only screen and (max-width: 800px) {
-  .portfolio .portfolio-container {
-    max-width: 70rem;
-  }
-  .main-slide,
-  .hidden-slide {
-    max-width: 55rem;
-  }
-
-  .hero-title {
-    font-size: 12rem;
-    line-height: 12rem;
-    margin-left: 3rem;
-  }
-  .hero-sub-title {
-    font-size: 5rem;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  #next {
-    right: -33rem;
-    height: 4rem;
-  }
-  #previous {
-    left: -33rem;
-    height: 4rem;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  #next {
-    right: -5rem;
-    top: 32rem;
-    height: 3.5rem;
-  }
-  #previous {
-    left: 0;
-    top: 32rem;
-    left: -5rem;
-    height: 3.5rem;
-  }
-
-  .slide-container p {
-    padding-top: 4rem;
-    text-align: center;
-    max-width: 98%;
-  }
-
-  .hero-title {
-    font-size: 10rem;
-    line-height: 10rem;
-  }
-  .hero-sub-title {
-    font-size: 4.2rem;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .nav-logo a {
-    font-size: 4rem;
-  }
-
-  .hero-title {
-    font-size: 13rem;
-    line-height: 13rem;
-  }
-  .hero-sub-title {
-    font-size: 7.5rem;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .hero-title {
-    font-size: 6rem;
-    line-height: 6rem;
-  }
-  .hero-sub-title {
-    font-size: 4.8rem;
-    margin-bottom: 5rem;
-    background-color: red;
-  }
-}
-
-/* @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
-    transition-delay: 0s !important;
-  }
-} */
