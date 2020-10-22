@@ -1,6 +1,3 @@
-// gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
-// const tl = new gsap.timeline();
-
 const exec = document.querySelector(".exec");
 const paws = document.querySelector(".paws");
 const uics = document.querySelector(".uics");
@@ -11,6 +8,11 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 const aboutSection = document.getElementById("about-section");
 const processSection = document.getElementById("process-section");
+const hamburgerMenu = document.querySelector(".hamburger-container");
+const navMenu = document.querySelector(".nav-container");
+const navLinksMenu = document.querySelector(".nav-links");
+const hamburger = document.getElementById("hamburger");
+const close = document.getElementById("close-menu");
 
 // Modal
 
@@ -35,6 +37,33 @@ function uicsModal() {
   body.classList.add("scroll");
 }
 
+function menuToggle() {
+
+  if(window.getComputedStyle(hamburger).display === "block") {
+    hamburger.style.display = "none";
+    close.style.display = "block";
+    navMenu.classList.add("responsive");
+    navLinksMenu.classList.add("responsive");
+
+   } else {
+     close.style.display ="none";
+     hamburger.style.display = "block";
+     navMenu.classList.remove("responsive");
+     navLinksMenu.classList.remove("responsive");
+   }
+
+}
+
+function menuClose() {
+  navMenu.classList.remove("responsive");
+  navLinksMenu.classList.remove("responsive");
+  close.style.display ="none";
+  hamburger.style.display = "block";
+}
+
+
+
+// Event listeners
 exec.addEventListener("click", execModal);
 paws.addEventListener("click", pawsModal);
 uics.addEventListener("click", uicsModal);
@@ -51,37 +80,10 @@ modal.addEventListener("click", () => {
   body.classList.remove("scroll");
 });
 
-// GSAP Animations
-// const aboutTitle = document.querySelector(".about-title");
-// const aboutLine = document.querySelector(".about-line");
-// const aboutContent = document.querySelector(".about-text");
+hamburgerMenu.addEventListener("click", menuToggle);
+navLinksMenu.addEventListener("click", menuClose);
 
-// gsap.from(".about-line", {
-//   scrollTrigger: {
-//     trigger: ".about-title",
-//     start: "top 700",
-//   },
-//   y: 300,
-//   duration: 1.5,
-//   ease: "power1",
-// });
 
-// gsap.from(".about-title", {
-//   scrollTrigger: {
-//     trigger: ".about-title",
-//     start: "top 700",
-//   },
-//   x: 400,
-//   duration: 1.5,
-//   ease: "power1",
-// });
 
-// gsap.from(".about-text", {
-//   scrollTrigger: {
-//     trigger: ".about-title",
-//     start: "top 700",
-//   },
-//   x: -400,
-//   duration: 1.5,
-//   ease: "power1",
-// });
+
+
