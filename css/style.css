@@ -672,8 +672,8 @@ footer p {
 }
 
 @media only screen and (max-width: 1000px) {
-  .nav-logo a {
-    margin-left: 2rem;
+  .nav-logo {
+    margin-left: 1.8rem;
   }
 
   .hero-title {
@@ -699,10 +699,10 @@ footer p {
   .hamburger-container {
     display: block;
     position: absolute;
-    top: 2rem;
+    top: 1.4rem;
     width: 3.2rem;
     height: 3.2rem;
-    right: 3rem;
+    right: 2.5rem;
     cursor: pointer;
     z-index: 9999;
   }
@@ -764,19 +764,19 @@ footer p {
   }
 
   .hero-sub-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-bottom: 3rem;
   }
 }
 
-@media only screen and (max-width: 615px) {
+@media only screen and (max-width: 620px) {
   .hero-title {
     font-size: 8rem;
     line-height: 10rem;
   }
 
   .hero-sub-title {
-    font-size: 4.8rem;
+    font-size: 6rem;
     margin-bottom: 5rem;
   }
 
@@ -796,5 +796,10 @@ footer p {
 
   h3 {
     font-size: 4rem;
+  }
+
+  .hero-sub-title {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
   }
 }
