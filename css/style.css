@@ -777,11 +777,16 @@ footer p {
 
   .hero-sub-title {
     font-size: 4.8rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
 
   .close {
     right: 1.5rem;
     top: -1rem;
+  }
+
+  .portfolio-item {
+    margin: 0;
+    padding: 0;
   }
 }
