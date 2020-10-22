@@ -784,9 +784,13 @@ footer p {
     right: 1.5rem;
     top: -1rem;
   }
+}
 
+@media only screen and (max-width: 430px) {
   .portfolio-item {
-    margin: 0;
-    padding: 0;
+    width: 32rem;
+  }
+  .website-img {
+    width: 31rem;
   }
 }
