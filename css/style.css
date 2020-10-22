@@ -788,7 +788,7 @@ footer p {
 
 @media only screen and (max-width: 430px) {
   .portfolio-item {
-    width: 32rem;
+    width: 31.5rem;
   }
   .website-img {
     width: 31rem;
