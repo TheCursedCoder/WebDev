@@ -397,7 +397,7 @@ header {
 /* Process Section */
 /* ************************************************************* */
 .process-section {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 .process-container {
   display: flex;
@@ -485,7 +485,7 @@ header {
   background-color: #1f1f1f;
   color: #f9f9f9;
   font-weight: 300;
-  margin: 0 2.5%;
+  margin: 10rem 2.5% 0 2.5%;
 }
 
 .contact-section p {
@@ -792,5 +792,9 @@ footer p {
   }
   .website-img {
     width: 31rem;
+  }
+
+  h3 {
+    font-size: 4rem;
   }
 }
